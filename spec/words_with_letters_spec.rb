@@ -14,6 +14,7 @@ RSpec.describe WordsWithLetters do
       [%w[a g], 5],
       [%w[a c], 2],
       [%w[a g r], 3],
+      [%w[a g r b], WordsWithLetters::TooManyLettersError],
     ]
     it_should_behave_like "word count", param_expectation_map
 
@@ -26,6 +27,7 @@ RSpec.describe WordsWithLetters do
         [%w[a g], 0],
         [%w[a c], 0],
         [%w[a g r], 0],
+        [%w[a g r b], WordsWithLetters::TooManyLettersError],
       ]
       it_should_behave_like "word count", param_expectation_map
     end
@@ -39,6 +41,7 @@ RSpec.describe WordsWithLetters do
         [%w[a g], 0],
         [%w[a c], 0],
         [%w[a g r], 0],
+        [%w[a g r b], WordsWithLetters::TooManyLettersError],
       ]
       it_should_behave_like "word count", param_expectation_map
     end
@@ -53,6 +56,7 @@ RSpec.describe WordsWithLetters do
       [%w[a g], 10],
       [%w[a c], 8],
       [%w[a g r], 11],
+      [%w[a g r b], WordsWithLetters::TooManyLettersError],
     ]
     it_should_behave_like "word count", param_expectation_map
 
@@ -65,6 +69,7 @@ RSpec.describe WordsWithLetters do
         [%w[a g], 0],
         [%w[a c], 0],
         [%w[a g r], 0],
+        [%w[a g r b], WordsWithLetters::TooManyLettersError],
       ]
       it_should_behave_like "word count", param_expectation_map
     end
@@ -78,6 +83,7 @@ RSpec.describe WordsWithLetters do
         [%w[a g], 0],
         [%w[a c], 0],
         [%w[a g r], 0],
+        [%w[a g r b], WordsWithLetters::TooManyLettersError],
       ]
       it_should_behave_like "word count", param_expectation_map
     end
